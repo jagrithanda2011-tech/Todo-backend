@@ -6,12 +6,14 @@ const todoRouter = express.Router()
 // GET all tasks
 todoRouter.get("/", async (req, res) => {
     try {
-        const result = await query('select * from task')
-        const rows = result.rows ? result.rows : []
-        res.status(200).json(rows)
+        const result = await query('select * from task');
+        const rows = result.rows ? result.rows : [];
+        res.status(200).json(rows);
     } catch (error) {
-        res.statusMessage = error
-        res.status(500).json({error: error})
+        console.log(error);
+        console.log(error.message);
+        res.statusMessage = error;
+        res.status(500).json({error: error});
     }
 })
 
