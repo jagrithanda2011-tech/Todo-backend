@@ -5,7 +5,6 @@ const cors = require("cors");
 const { todoRouter } = require('./routes/todo.js')
 
 const app = express();
-const {query} = require('./helpers/db.js')
 
 app.use(cors());
 app.use(express.json());
