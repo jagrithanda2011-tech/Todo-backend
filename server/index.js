@@ -2,7 +2,7 @@ require('dotenv').config()
 // const { Pool } = require("pg");
 const express = require("express");
 const cors = require("cors");
-const { todoRouter } = require('./routes/todo.js')
+const { todoRouter } = require('./routes/todo.js');
 
 const app = express();
 
@@ -10,12 +10,12 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended : false}));
 
-app.use('/', todoRouter)
+app.use('/', todoRouter);
 
-const port = process.env.PORT
+const port = process.env.PORT;
 
 app.listen(port, () => {
-    console.log(`Server running on port ${port}`)
-})
+    console.log(`Server running on port ${port}`);
+});
 
 

@@ -5,10 +5,10 @@ const query = (sql, values = []) => {
     return new Promise(async (resolve, reject) => {
         try {
         
-            const result = await pool.query(sql, values)
-            resolve(result)
+            const result = await pool.query(sql, values);
+            resolve(result);
         } catch (error) {
-            reject(error.message)
+            reject(error.message);
         }
     })
 }
@@ -21,8 +21,8 @@ const query = (sql, values = []) => {
         password: process.env.DB_PASSWORD,
         port: process.env.DB_PORT,
         ssl: process.env.SSL
-    })
+    });
 
 
 
-module.exports = { query }
+module.exports = { query };
