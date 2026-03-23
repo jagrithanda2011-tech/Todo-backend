@@ -1,4 +1,4 @@
-require('dotenv').config({path: '/.env.production'})
+require('dotenv').config({path: '/.env.vault'})
 const { Pool } = require('pg')
 
 const query = (sql, values = []) => {
